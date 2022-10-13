@@ -29,8 +29,29 @@ const Crud = () => {
     const mydata = data.filter((e, index) => {
       return e.id !== id;
     });
-    setData(mydata);
-    swal('Deleted Successfully');
+    // setData(mydata);
+    if(mydata){
+      swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover this  file!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          swal("Deleted Successfully!", {
+            icon: "success",
+          });
+          setData(mydata);
+          
+        } else {
+          setData(data)
+        }
+      }); 
+    }
+
+  
   };
   const Update = (id) => {
     
