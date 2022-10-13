@@ -53,6 +53,9 @@ margin: auto;
 input{
   width: 75%;
   margin: 10px 0 !important;
+  border-radius:5px  ;
+  border: 1px solid grey; 
+  outline: none;
   padding: 10px 12px;
 }
 
