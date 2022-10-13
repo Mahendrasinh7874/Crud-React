@@ -52,14 +52,13 @@ const Update = (id) => {
         })
         e.preventDefault();
         const newdata = { id , fname : value.fname,  lname : value.lname}
+        localStorage.setItem('data',  JSON.stringify(data));
         updateId ? setData(myData) : setData([...data,newdata]);
+        
         setValue({fname : '',lname: ''})
         setUpdateId('');
     }
 
-    useEffect(() => {
-        localStorage.setItem('data',  JSON.stringify(data));
-    },[data])
 
   return (
     <div className="container mt-5">
