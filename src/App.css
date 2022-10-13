@@ -1,5 +1,7 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -35,4 +37,34 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.container{
+  width: 65%;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+margin: auto;
+  height: 100%;
+  flex-wrap: wrap;
+}
+input{
+  width: 75%;
+  margin: 10px 0 !important;
+  padding: 10px 12px;
+}
+
+.form{
+flex-basis: 50%;
+  margin: auto;
+}
+.data-container{
+  width: 50%;
+  margin: auto;
+  flex-basis: 50%;
+}
+button{
+  padding: 12px 15px;
 }
